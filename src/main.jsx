@@ -11,8 +11,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createTheme, MantineProvider, Loader } from "@mantine/core";
 import { ModalsProvider } from "@mantine/modals";
-// import { RingLoader } from "./ui/RingLoader.jsx";
-// import { GlobalLoader } from "./ui/GlobalLoader.jsx";
+import { RingLoader } from "./ui/RingLoader.jsx";
+import { GlobalLoader } from "./ui/GlobalLoader.jsx";
 
 const theme = createTheme({
   components: {
@@ -21,15 +21,15 @@ const theme = createTheme({
         size: 1320,
       },
     },
-    // Loader: Loader.extend({
-    //   defaultProps: {
-    //     loaders: {
-    //       ...Loader.defaultLoaders,
-    //       ring: RingLoader,
-    //     },
-    //     type: "ring",
-    //   },
-    // }),
+    Loader: Loader.extend({
+      defaultProps: {
+        loaders: {
+          ...Loader.defaultLoaders,
+          ring: RingLoader,
+        },
+        type: "ring",
+      },
+    }),
   },
 });
 
@@ -41,7 +41,7 @@ createRoot(document.getElementById("root")).render(
       <MantineProvider theme={theme}>
         <ModalsProvider>
           <App />
-          {/* <GlobalLoader /> */}
+          <GlobalLoader />
         </ModalsProvider>
 
         <Notifications />
