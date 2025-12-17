@@ -47,8 +47,8 @@ const Layout = () => {
           className={`
             flex-1 
             p-6 
-            overflow-y-auto // Main kontent o'z ichida scroll bo'ladi
-            h-full // Otasi (90vh) balandligini to'liq egallaydi
+            overflow-y-auto
+            h-full 
           `}
         >
           <Outlet />

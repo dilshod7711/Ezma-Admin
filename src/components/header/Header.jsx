@@ -23,7 +23,6 @@ const Header = ({ toggleSidebar }) => {
         <button
           onClick={toggleSidebar}
           className="p-2 mr-4 rounded hover:bg-gray-700 transition-colors"
-          title="Sidebar'ni ochish/yopish"
         >
           <HiOutlineMenu className="w-6 h-6 text-white" />
         </button>
