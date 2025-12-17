@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Books from "./pages/Books/Books";
 import Libraries from "./pages/Libraries/Libraries";
@@ -11,6 +11,7 @@ const App = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Navigate to={"/login"} />} />
         <Route path="/login" element={<Login />} />
         <Route element={<PrivateRequset />}>
           <Route element={<Layout />}>
