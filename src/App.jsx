@@ -6,6 +6,7 @@ import Libraries from "./pages/Libraries/Libraries";
 import Profile from "./pages/Profile/Profile";
 import PrivateRequset from "./components/privateRequest/PrivateRequset";
 import Login from "./pages/Auth/login/Login";
+import Register from "./pages/Auth/register/Register";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/books" element={<Books />} />
             <Route path="/libraries" element={<Libraries />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/register" element={<Register />} />
           </Route>
         </Route>
       </Routes>

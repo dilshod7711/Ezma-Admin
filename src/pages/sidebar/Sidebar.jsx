@@ -79,6 +79,13 @@ const Sidebar = ({ isSidebarOpen }) => {
             <FaBook className="w-5 h-5 flex-shrink-0" />
             <span className={getTextSpanClass()}>{t("books")}</span>
           </NavLink>
+          <NavLink
+            to="/register"
+            className={({ isActive }) => getNavLinkClass(isActive)}
+          >
+            <FaBook className="w-5 h-5 flex-shrink-0" />
+            <span className={getTextSpanClass()}>{t("createBook")}</span>
+          </NavLink>
         </div>
       </nav>
 

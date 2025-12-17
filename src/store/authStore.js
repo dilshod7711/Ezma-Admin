@@ -8,6 +8,7 @@ const authStore = create(
       access: null,
       isAuth: false,
       likedBooks: [],
+      
       login: (user, access) =>
         set({
           user,
@@ -29,8 +30,8 @@ const authStore = create(
 
           return {
             likedBooks: isExist
-              ? state.likedBooks.filter((item) => item.id !== book.id) // O'chirish
-              : [...state.likedBooks, book], // Qo'shish
+              ? state.likedBooks.filter((item) => item.id !== book.id) 
+              : [...state.likedBooks, book], 
           };
         }),
     }),

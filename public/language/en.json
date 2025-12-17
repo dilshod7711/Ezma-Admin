@@ -7,5 +7,6 @@
   "confirmExit": "Are you sure you want to leave",
   "librirary": "Libraries",
   "books": "Books",
-  "exit": "Logout"
+  "exit": "Logout",
+  "createBook": "Open Library"
 }

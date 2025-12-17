@@ -9,11 +9,14 @@ import authStore from "../../store/authStore";
 
 const LibrariyBooks = ({ type }) => {
   const { toggleLiked, likedBooks } = authStore();
+  console.log(likedBooks);
 
   const { data: books } = useQuery({
     queryKey: ["AllBooks"],
-    queryFn: () => API.get("/libraries/libraries/").then((res) => res.data),
-    select: (data) => data.results || data,
+    queryFn: async () => {
+      const res = await API.get("/libraries/libraries/");
+      return res.data;
+    },
   });
   const filteredBooks = books
     ?.filter((item) => {
@@ -34,10 +37,13 @@ const LibrariyBooks = ({ type }) => {
     });
 
   const { mutate: deactive } = useMutation({
-    mutationFn: (id) =>
-      API.patch(`/libraries/library/deactivate/${id}/`, {
+    mutationFn: async (id) => {
+      const res = await API.patch(`/libraries/library/deactivate/${id}/`, {
         is_active: false,
-      }),
+      });
+      return res;
+    },
+
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["AllBooks"] });
     },
@@ -50,10 +56,12 @@ const LibrariyBooks = ({ type }) => {
   }
 
   const { mutate: activateLibrirary } = useMutation({
-    mutationFn: (id) =>
-      API.patch(`/libraries/library/activate/${id}/`, {
+    mutationFn: async (id) => {
+      const res = await API.patch(`/libraries/library/activate/${id}/`, {
         is_active: true,
-      }),
+      });
+      return res;
+    },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["AllBooks"] });
     },

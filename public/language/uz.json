@@ -3,9 +3,10 @@
   "logout": "Chiqish",
   "logoutConfirm": "Chiqish. Profilni tark etmoqchimisiz?",
   "confirm": "Hа",
-  "cancel":"Yo'q",
-  "confirmExit":"Haqiqatdan ham chiqmoqchimisiz?",
-  "librirary":"Kutubxonalar",
-  "books":"Kitoblar",
-  "exit":"Chiqish"
+  "cancel": "Yo'q",
+  "confirmExit": "Haqiqatdan ham chiqmoqchimisiz?",
+  "librirary": "Kutubxonalar",
+  "books": "Kitoblar",
+  "exit": "Chiqish",
+  "createBook": "Kutubxona Ochish"
 }
