@@ -12,7 +12,7 @@ const LibrariyBooks = ({ type }) => {
   console.log(likedBooks);
 
   const { data: books } = useQuery({
-    queryKey: ["AllBooks"],
+    queryKey: ["librariyBook"],
     queryFn: async () => {
       const res = await API.get("/libraries/libraries/");
       return res.data;
@@ -45,7 +45,7 @@ const LibrariyBooks = ({ type }) => {
     },
 
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["AllBooks"] });
+      queryClient.invalidateQueries({ queryKey: ["librariyBook"] });
     },
   });
 
