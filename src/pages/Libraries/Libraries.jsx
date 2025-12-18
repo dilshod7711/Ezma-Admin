@@ -2,8 +2,10 @@ import { useState, useRef } from "react";
 import { FloatingIndicator, Tabs, Text } from "@mantine/core";
 import classes from "./Lib.module.css";
 import LibrariyBooks from "../../components/librariBooks/LibrariyBooks";
+import { useTranslation } from "react-i18next";
 
 const Libraries = () => {
+  const { t } = useTranslation();
   const rootRef = useRef(null);
   const controlsRefs = useRef({});
   const [value, setValue] = useState("1");
@@ -29,28 +31,28 @@ const Libraries = () => {
                 ref={setControlRef("1")}
                 className={classes.tab}
               >
-                Faol
+                {t("faol")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="2"
                 ref={setControlRef("2")}
                 className={classes.tab}
               >
-                NoFaol
+                {t("nofaol")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="3"
                 ref={setControlRef("3")}
                 className={classes.tab}
               >
-                Sevimlilar
+                {t("like")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="4"
                 ref={setControlRef("4")}
                 className={classes.tab}
               >
-                Ko'p kitoblar
+                K{t("countBooks")}
               </Tabs.Tab>
               <Tabs.Tab
                 value="5"
@@ -76,7 +78,7 @@ const Libraries = () => {
 
           <div className="flex items-center gap-2 w-[35%] justify-end ml-4">
             <input
-              placeholder="Qidirish..."
+              placeholder={t("searchLibrirary")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-[280px] bg-[#1a1a1a] text-white px-3 py-2 rounded-sm border border-[#2d3748] focus:border-[#6366f1] focus:outline-none"

@@ -8,5 +8,12 @@
   "librirary": "Libraries",
   "books": "Books",
   "exit": "Logout",
-  "createBook": "Open Library"
+  "createBook": "Open Library",
+  "allBooks": "All books",
+  "like": "Favorites",
+  "BS": "Search by book title",
+  "faol": " Active",
+  "nofaol": " Inactive",
+  "countBooks": "Many books",
+  "searchLibrirary": "Search by library…"
 }

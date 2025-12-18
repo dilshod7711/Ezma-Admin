@@ -127,7 +127,6 @@ const Profile = () => {
               label="* Ism"
               placeholder="Ismingizni kiriting"
               value={formData.name}
-              
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }

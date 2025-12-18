@@ -8,5 +8,12 @@
   "librirary": "Kutubxonalar",
   "books": "Kitoblar",
   "exit": "Chiqish",
-  "createBook": "Kutubxona Ochish"
+  "createBook": "Kutubxona Ochish",
+  "allBooks": "Barcha kitoblar",
+  "like": "Sevimlilar",
+  "BS":"Kitob nomi bo'yicha qidirish",
+  "faol":" Faol",
+  "nofaol":" Nofaol",
+  "countBooks":"Ko‘p kitoblar",
+  "searchLibrirary":"Kutubxona buyicha qidirish..."
 }

@@ -3,8 +3,10 @@ import { FloatingIndicator, Tabs } from "@mantine/core";
 import { useDebouncedValue } from "@mantine/hooks";
 import classes from "./Book.module.css";
 import AllBooks from "../../components/allboks/AllBooks";
+import { useTranslation } from "react-i18next";
 
 const Books = () => {
+  const { t } = useTranslation();
   const rootRef = useRef(null);
   const controlsRefs = useRef({});
   const [activeTab, setActiveTab] = useState("all");
@@ -32,14 +34,14 @@ const Books = () => {
                   ref={setControlRef("all")}
                   className={classes.tab}
                 >
-                  Barcha kitoblar
+                  {t("allBooks")}
                 </Tabs.Tab>
                 <Tabs.Tab
                   value="liked"
                   ref={setControlRef("liked")}
                   className={classes.tab}
                 >
-                  Sevimlilar
+                  {t("like")}
                 </Tabs.Tab>
                 <Tabs.Tab
                   value="az"
@@ -68,7 +70,7 @@ const Books = () => {
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Kitob nomi bo'yicha qidirish"
+              placeholder={t("BS")}
               className="w-[280px] bg-[#1a1a1a] text-white px-3 py-2 rounded-sm border border-[#2d3748] focus:border-[#6366f1] focus:outline-none"
             />
           </div>
