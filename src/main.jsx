@@ -28,6 +28,7 @@ const theme = createTheme({
           ring: RingLoader,
         },
         type: "ring",
+        
       },
     }),
   },
@@ -44,7 +45,7 @@ createRoot(document.getElementById("root")).render(
           <GlobalLoader />
         </ModalsProvider>
 
-        <Notifications />
+        <Notifications position="top-right" />
       </MantineProvider>
 
       <ReactQueryDevtools initialIsOpen={false} />

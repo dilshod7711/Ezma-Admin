@@ -8,6 +8,7 @@ export const RingLoader = forwardRef(({ style, ...others }, ref) => (
       width: "var(--loader-size)",
       height: "var(--loader-size)",
       stroke: "var(--loader-color)",
+
       ...style,
     }}
     viewBox="0 0 45 45"

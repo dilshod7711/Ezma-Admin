@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Container, FloatingIndicator, Tabs, Text } from "@mantine/core";
+import { FloatingIndicator, Tabs, Text } from "@mantine/core";
 import classes from "./Lib.module.css";
 import LibrariyBooks from "../../components/librariBooks/LibrariyBooks";
 
@@ -7,6 +7,7 @@ const Libraries = () => {
   const rootRef = useRef(null);
   const controlsRefs = useRef({});
   const [value, setValue] = useState("1");
+  const [search, setSearch] = useState("");
 
   const setControlRef = (val) => (node) => {
     if (node) controlsRefs.current[val] = node;
@@ -76,6 +77,8 @@ const Libraries = () => {
           <div className="flex items-center gap-2 w-[35%] justify-end ml-4">
             <input
               placeholder="Qidirish..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               className="w-[280px] bg-[#1a1a1a] text-white px-3 py-2 rounded-sm border border-[#2d3748] focus:border-[#6366f1] focus:outline-none"
             />
           </div>
@@ -83,22 +86,22 @@ const Libraries = () => {
 
         <div className="mt-[20px] overflow-y-auto flex-grow">
           <Tabs.Panel value="1">
-            <LibrariyBooks type="active" />
+            <LibrariyBooks type="active" search={search} />
           </Tabs.Panel>
           <Tabs.Panel value="2">
-            <LibrariyBooks type="inactive" />
+            <LibrariyBooks type="inactive" search={search} />
           </Tabs.Panel>
           <Tabs.Panel value="3">
-            <LibrariyBooks type="liked" />
+            <LibrariyBooks type="liked" search={search} />
           </Tabs.Panel>
           <Tabs.Panel value="4">
-            <LibrariyBooks type="most_books" />
+            <LibrariyBooks type="most_books" search={search} />
           </Tabs.Panel>
           <Tabs.Panel value="5">
-            <LibrariyBooks type="az" />
+            <LibrariyBooks type="az" search={search} />
           </Tabs.Panel>
           <Tabs.Panel value="6">
-            <LibrariyBooks type="za" />
+            <LibrariyBooks type="za" search={search} />
           </Tabs.Panel>
         </div>
       </Tabs>

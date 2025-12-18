@@ -3,7 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid #463a5ada;
+  border: 1px solid rgba(128, 128, 128, 0.735);
   padding: 4px 6px;
   border-radius: 4px;
 }
