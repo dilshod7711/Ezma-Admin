@@ -84,13 +84,6 @@ const LibrariyBooks = ({ type, search }) => {
     navigate(`/librariessDetail/${id}`);
   }
 
-  if (isLoading)
-    return (
-      <Center h={200}>
-        <Loader color="violet" />
-      </Center>
-    );
-
   if (isError)
     return (
       <Text color="red" ta="center" mt="xl">
