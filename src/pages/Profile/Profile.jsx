@@ -70,8 +70,6 @@ const Profile = () => {
     `,
   };
 
-  if (isLoading) return <Box className="p-10 text-white">Yuklanmoqda...</Box>;
-
   return (
     <div className="mt-10 p-4 text-white">
       <div className="px-[50px]">

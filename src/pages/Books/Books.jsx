@@ -66,7 +66,7 @@ const Books = () => {
             </Tabs.List>
           </Tabs>
 
-          <div className="flex items-center gap-2 w-[35%] justify-end">
+          <div className="flex items-center gap-2 w-[75%] justify-end">
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
